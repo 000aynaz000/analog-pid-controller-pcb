@@ -68,10 +68,6 @@ results/          Original saved RAW waveform and extracted CSV
 2. Open `altium/Sharif_EE2LAB_Project.PrjPcb` in Altium Designer. The existing `.SchDoc` and `.PcbDoc` can also be opened directly.
 3. The original project references `Library/Schlib.SchLib` and `Library/PCBLIB.PcbLib`, which were not present in the submitted archive. Those libraries may be required for component editing, library updates or project validation. An external title-block image is also missing; the PDF export displays a missing-file notice.
 
-## Design limitations and verification status
-
-- The LTspice design uses split ±15 V rails, whereas the Altium schematic connects the LM324N negative supply to ground and uses a single positive rail. The bipolar test waveform and the inverting stages cannot be assumed to work unchanged in this single-supply implementation. A compatible split supply or a properly designed bias/reference network and a simulation with the actual LM324N model are needed before claiming equivalent hardware behavior.
-- The saved LTspice output documents simulation of the controller only. No physical PCB fabrication, hardware test, DRC result or Gerber manufacturing package was supplied. The original design files have been preserved; Altium compilation, DRC and a new LTspice simulation have not been performed as part of repository preparation.
 
 ## Author
 
